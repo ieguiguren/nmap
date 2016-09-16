@@ -6,7 +6,7 @@
   - libssl-dev
   - autoconf
   - build-essential 
-  - libpathfinder-openssl-1 
+#  - libpathfinder-openssl-1 
   - liblinear-dev 
   - libpcap-dev 
   - libpcre3-dev 
@@ -19,3 +19,5 @@
   command: chdir=/tmp/nmap make
 - name: installing nmap
   command: chdir=/tmp/nmap make install
+- include: maxmind.yml
+
