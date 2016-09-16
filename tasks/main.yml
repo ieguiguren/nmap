@@ -1,0 +1,15 @@
+---
+- name: installing nmap compilation dependencies
+  apt: name={{ item }} cache_valid_time=7200  state=latest update_cache=yes
+  with_items:
+  - subversion
+  - libssl-dev
+  - autoconf
+- name: downloading nmap
+  subversion: username=guest dest=/tmp/nmap repo=https://svn.nmap.org/nmap 
+- name: configure nmap
+  command: chdir=/tmp/nmap ./configure --prefix=/opt/nmap
+- name: make nmap
+  command: chdir=/tmp/nmap make
+- name: installing nmap
+  command: chdir=/tmp/nmap make install
