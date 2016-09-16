@@ -5,10 +5,16 @@
   - subversion
   - libssl-dev
   - autoconf
+  - build-essential 
+  - libpathfinder-openssl-1 
+  - liblinear-dev 
+  - libpcap-dev 
+  - libpcre3-dev 
+  - checkinstall
 - name: downloading nmap
   subversion: username=guest dest=/tmp/nmap repo=https://svn.nmap.org/nmap 
 - name: configure nmap
-  command: chdir=/tmp/nmap ./configure --prefix=/opt/nmap
+  command: chdir=/tmp/nmap ./configure 
 - name: make nmap
   command: chdir=/tmp/nmap make
 - name: installing nmap
