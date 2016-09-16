@@ -3,7 +3,7 @@ dependencies: []
 
 galaxy_info:
   author: Ivan Eguiguren
-  description: Installs Nmap; An open source port scanner from source.
+  description: Installs Nmap; An open source port scanner from source. It provides maxmind geolocation too.
   company: ""
   license: "BSD"
   min_ansible_version: 1.2
@@ -20,3 +20,4 @@ galaxy_info:
     - port
     - security
     - infosec
+    - geolocation

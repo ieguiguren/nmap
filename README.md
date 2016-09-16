@@ -1,7 +1,7 @@
 Nmap     
 ====
 
-Downloads from Nmap's SVN and compiles nmap.
+Downloads from Nmap's SVN and compiles nmap. Also downloads and install geolocation from maxmind for scripts like ip-geolocation-maxmind.
 
 Requirements
 ------------
