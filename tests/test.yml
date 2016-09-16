@@ -1,5 +1,7 @@
 ---
-- hosts: localhost
-  remote_user: root
-  roles:
-    - nmap
+- hosts: all
+  remote_user: vagrant
+  become: true
+  become_method: sudo
+  tasks:
+    - include: ../tasks/main.yml
