@@ -1,6 +1,6 @@
 ---
 - name: download Geocity
-  get_url: dest=/usr/local/share/nmap/nselib/data url='http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'
+  get_url: dest=/usr/local/share/nmap/nselib/data url='http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz' force=yes
 - name: uncompressing
-  shell: dest=/usr/local/share/nmap/nselib/data gunzip /usr/local/share/nmap/nselib/data/GeoLiteCity.dat.gz
+  shell: dest=/usr/local/share/nmap/nselib/data gunzip -f /usr/local/share/nmap/nselib/data/GeoLiteCity.dat.gz 
 
