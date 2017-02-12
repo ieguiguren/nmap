@@ -12,7 +12,7 @@
   - libpcre3-dev 
   - checkinstall
 - name: downloading nmap
-  subversion: username=guest dest=/tmp/nmap repo=https://svn.nmap.org/nmap 
+  subversion: username=guest dest=/tmp/nmap repo=https://svn.nmap.org/nmap/
 - name: configure nmap
   command: chdir=/tmp/nmap ./configure 
 - name: make nmap
