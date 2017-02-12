@@ -2,7 +2,7 @@
 - name: installing nmap compilation dependencies
   apt: name={{ item }} cache_valid_time=7200  state=latest update_cache=yes
   with_items:
-  - subversion
+  - git
   - libssl-dev
   - autoconf
   - build-essential 
@@ -12,7 +12,8 @@
   - libpcre3-dev 
   - checkinstall
 - name: downloading nmap
-  subversion: username=guest dest=/tmp/nmap repo=https://svn.nmap.org/nmap/
+  git: repo=https://github.com/nmap/nmap.git dest=/tmp/
+#  subversion: username=guest dest=/tmp/nmap repo=https://svn.nmap.org/nmap/
 - name: configure nmap
   command: chdir=/tmp/nmap ./configure 
 - name: make nmap
