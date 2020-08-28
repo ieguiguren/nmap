@@ -20,5 +20,7 @@
   command: chdir=/tmp/nmap make
 - name: installing nmap
   command: chdir=/tmp/nmap make install
-- include: maxmind.yml
+
+  # database is not available without login anymore
+  # - include: maxmind.yml
 
